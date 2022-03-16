@@ -14,19 +14,18 @@ const handleUserInput = function(data) {
   if (data === '\u0003') {
     console.log(`Bye, snake!`);
     process.exit();
-  }
-  if (data === "w") {
+  } else if (data === "w") {
     
     connection.write(`Move: up`);
-  }
-  if (data === "a") {
+  } else if (data === "a") {
     connection.write(`Move: left`);
-  }
-  if (data === "s") {
+  } else if (data === "s") {
     connection.write(`Move: down`);
-  }
-  if (data === "d") {
+  } else if (data === "d") {
     connection.write(`Move: right`);
+  } else {
+    connection.write('Say: ssss');
+
   }
 };
 
